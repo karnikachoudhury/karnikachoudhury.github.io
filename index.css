@@ -1,0 +1,10 @@
+@import "tailwindcss";
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+    --black: #110e15;
+    --dark_purple: #211720;
+    --dark_blue: #154b47;
+    --light_blue: #3d606e;
+  }
+  

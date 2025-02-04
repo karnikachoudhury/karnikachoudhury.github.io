@@ -1,0 +1,29 @@
+{
+  "name": "karnikachoudhury.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karnikachoudhury/karnikachoudhury.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karnikachoudhury/karnikachoudhury.github.io/issues"
+  },
+  "homepage": "https://github.com/karnikachoudhury/karnikachoudhury.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.3",
+    "npx": "^10.2.2"
+  }
+}
