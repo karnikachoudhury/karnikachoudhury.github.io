@@ -7,4 +7,7 @@
     --dark_blue: #154b47;
     --light_blue: #3d606e;
   }
-  
+
+  p {
+    color: var(--dark_blue)
+  }
