@@ -4,8 +4,22 @@
 @theme {
     --color-black: #110e15;
     --color-dark-purple: #211720;
+    --color-dark-navy: #0b1215;
     --color-dark-blue: #154b47;
     --color-light-blue: #3d606e;
 
     --font-rubik: "Rubik", serif;
+
+    --animate-wiggle: wiggle 1s ease-in-out infinite;
+
+    @keyframes wiggle {
+        0%,
+        100% {
+            transform: rotate(-3deg);
+        }
+
+        50% {
+            transform: rotate(3deg);
+        }
+    }
 }

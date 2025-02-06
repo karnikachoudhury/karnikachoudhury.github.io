@@ -1,85 +1,305 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="./src/output.css">
-    </head>
-  <body class = "flex flex-col justify-items-center bg-dark-purple font-rubik">
-      <div class = "flex flex-row justify-end bg-black w-full text-white mx-auto">
-        <a href = "#aboutme" class = "hover:bg-light-blue p-3"> about me </a>
-        <a href = "#experience" class = "hover:bg-light-blue p-3"> experience </a>
-        <a href = "#projects" class = "hover:bg-light-blue p-3"> projects </a>
+
+<head>
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="flex flex-col justify-items-center bg-dark-purple font-rubik">
+  <div class="flex flex-row justify-end bg-black w-full text-white mx-auto">
+    <button onclick="scrollintro()" class="hover:bg-light-blue p-3"> about me </button>
+    <button onclick="scrollexperience()" class="hover:bg-light-blue p-3"> experience </button>
+    <button onclick="scrollprojects()" class="hover:bg-light-blue p-3"> projects </button>
+    <button onclick="scrollextracurr()" class="hover:bg-light-blue p-3"> extracurriculars </button>
+  </div>
+
+  <div id="intro" class="flex flex-col justify-items-center bg-black/50 text-white w-3/5 mt-8 p-3 mx-auto">
+    <div class="text-white text-xl mx-auto animate-wiggle"> hello ! </div>
+    <div class="text-white text-lg mx-auto"> I am Karnika Choudhury, </div>
+    <div class="text-white text-lg mx-auto"> an aspiring software engineer and computer scientist. </div>
+    <div id = ".twinkle-text" class="text-white text-lg mx-auto mt-5"> . ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁. </div>
+    <div class="text-white text-center text-sm mt-5 mx-auto"> I study computer science at the University of Texas at
+      Austin
+      (hook 'em) while pursuing a minor in stats and data science. I am well-versed in full-stack development, web
+      development and machine learning.
+      In my free time, I enjoy rock-climbing, drawing, and reading. </div>
+    <div class="flex flex-row justify-center mt-8">
+      <a href="https://github.com/karnikachoudhury">
+        <img class="w-16 h-9" src="./images/github_icon.png">
+      </a>
+      <a href="https://www.linkedin.com/in/karnika-choudhury-5b3479251/">
+        <img class="w-10 h-10" src="./images/linkedin_icon.png">
+      </a>
+
+    </div>
+  </div>
+
+  <div id="experience" class="flex flex-col justify-items-center bg-dark-navy/50 text-white w-3/5 mt-8 p-3 mx-auto">
+    <div class="text-white text-xl mx-auto font-bold"> Technical Experience </div>
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+      <div class="text-white text-center text-lg"> H-E-B </div>
+
+      <div class="text-white text-center text-sm"> - Software Engineering Intern - </div>
+      <ul class="list-disc pl-5 mt-2">
+        <li> developed backend of 2 microservices with Golang, PostgreSQL, Docker </li>
+        <li> updated SQL queries and endpoints for lane management microservice to reflect new database schema </li>
+        <li> developed 4 endpoints in a custom Golang framework with GORM for configuration management </li>
+        <li> stripped Kubernetes specifications to transition application from running on data centers to store edge
+        </li>
+        <li> integrated Mosquitto message broker to create a pub/sub messaging system between microservices </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-6">
+      <div class="text-white text-center text-lg"> University of Texas at Austin Computer Science Department </div>
+      <div class="text-white text-center text-sm"> - Data Structures Teaching Assistant - </div>
+      <ul class="list-disc pl-5 mt-2">
+        <li> lead weekly discussion sections of 26 students to clarify concepts and assist with the completion of
+          LeetCode style practice problems in Java to assist in exam preparation </li>
+        <li> assist with debugging and reasoning through the algorithmic logic of various programming assignments </li>
+        <li> clarify notable gaps in knowledge regarding the lecture content </li>
+      </ul>
+
+      <div class="text-white text-center text-sm mt-3"> - Computer Science Pod Mentor - </div>
+      <ul class="list-disc pl-5 mt-2">
+        <li> coordinate and lead weekly events for 25 freshmen majoring in computer science </li>
+        <li> assist with exam preparation for introductory computer science concepts class </li>
+        <li> organize networking events with professors in the computer science department </li>
+        <li> provide guidance on corporate recruiting process including resume reviews and coding assessment practice
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-6">
+      <div class="text-white text-center text-lg"> StemKidz LLC. </div>
+      <div class="text-white text-center text-sm"> - Python Instructor - </div>
+      <ul class="list-disc pl-5 mt-2">
+        <li> instructed 10-15 children (ages 11-13) on python programming and mathematical base conversions </li>
+        <li> guided students through the creation of a rock-paper-scissors final project </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div id="projects" class="flex flex-col justify-items-center bg-black/50 text-white w-3/5 mt-8 p-3 mx-auto">
+    <div class="text-white text-xl mx-auto font-bold"> Projects </div>
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+      <div class="text-white text-center text-lg"> HikeMail </div>
+      <div class="text-white text-center text-sm mt-3"> An email client that enables users to organize
+        their incoming recruiting emails by automatically categorizing them into under review, interview, acceptance,
+        and rejection. </div>
+      <ul class="list-disc pl-5 mt-4">
+        <li> designed and implemented landing page and application dashboard pages with HTML, CSS and JavaScript </li>
+        <li> wrote an AWS Lambda function to integrate with ChatGPT API in order to process the content of a recruiting
+          email and categorize it </li>
+        <li> developed the register and login API to interface with backend </li>
+      </ul>
+      <div class="text-white mt-5 font-bold text-sm text-center"> built with: AWS SES, AWS S2, Docker, PostgreSQL,
+        React, HTML/CSS/JS </div>
+      <div class="flex flex-row mt-5 justify-center space-x-4">
+        <a href="https://github.com/Hikemail/hikemail"> <button class="text-white bg-light-blue p-3 hover:bg-dark-blue">
+            github code repo </button> </a>
+        <a href="https://devpost.com/software/hike"> <button class="text-white bg-light-blue p-3 hover:bg-dark-blue">
+            demo video </button> </a>
       </div>
+    </div>
 
-      <div class = "flex flex-col justify-items-center bg-black/50 text-white w-3/5 mt-8 p-3 mx-auto">
-        <div class = "text-white text-xl mx-auto animate-pulse"> hello ! </div>
-        <div class = "text-white text-lg mx-auto"> I am Karnika Choudhury, </div>
-        <div class = "text-white text-lg mx-auto"> an aspiring software engineer and computer scientist. </div>
-        <div class = "text-white text-lg mx-auto mt-5">  . ݁₊ ⊹ . ݁ ⟡ ݁ . ⊹ ₊ ݁. </div>
-        <div class = "text-white text-center text-sm mt-5 mx-auto"> I study computer science at the University of Texas at Austin 
-          (hook 'em) while pursuing a minor in stats and data science. I am well-versed in full-stack development, web development and machine learning.
-           In my free time, I enjoy rock-climbing, drawing, and reading. </div>
-        <div class = "flex flex-row justify-center mt-8">
-          <a href = "https://github.com/karnikachoudhury">
-            <img class = "w-16 h-9" src = "./images/github_icon.png">
-          </a>
-          <a href = "https://www.linkedin.com/in/karnika-choudhury-5b3479251/"> 
-            <img class = "w-10 h-10" src = "./images/linkedin_icon.png"> 
-          </a>
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+      <div class="text-white text-center text-lg"> Seek </div>
+      <div class="text-white text-center text-sm mt-3"> A social media mobile application that promotes spontaneous
+        interaction through a hide and seek style game, where users are notified if their friends are in a 5 meter
+        radius and are
+        prompted to take and post a picture with them. </div>
+      <ul class="list-disc pl-5 mt-4">
+        <li> designed and implemented the friends, friend request and suggested contact pages with HTML, CSS and
+          JavaScript </li>
+        <li> created the API that allows users to view suggested friends from their contacts list, send friend requests,
+          and interface
+          with the backend to populate the friends and friend request pages </li>
+        <li> designed and implemented the camera page with the react-expo library </li>
 
-        </div>
+      </ul>
+      <div class="text-white mt-5 font-bold text-sm text-center"> built with: AWS Lambda, AWS S3, Express.js,
+        React-Native, PostGreSQL HTML/CSS/JS </div>
+      <div class="flex flex-row mt-5 justify-center space-x-4">
+        <a href="https://github.com/KshitijKapoor8/Seek"> <button
+            class="text-white bg-light-blue p-3 hover:bg-dark-blue"> github code repo </button> </a>
+        <a href="https://devpost.com/software/seek-ju5cw8"> <button
+            class="text-white bg-light-blue p-3 hover:bg-dark-blue"> demo video </button> </a>
       </div>
+    </div>
 
-      <div class = "flex flex-col justify-items-center bg-black/50 text-white w-3/5 mt-8 p-3 mx-auto">
-        <div class = "text-white text-xl mx-auto font-bold"> Technical Experience </div>
-        <div class = "flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-3">
-          <div class = "text-white text-center text-lg"> H-E-B </div>
-
-          <div class = "text-white text-center text-base"> - Software Engineering Intern - </div>
-          <ul class = "list-disc pl-5">
-            <li> developed backend of 2 microservices with Golang, PostgreSQL, Docker </li>
-            <li> updated SQL queries and endpoints for lane management microservice to reflect new database schema </li>
-            <li> developed 4 endpoints in a custom Golang framework with GORM for configuration management </li>
-            <li> stripped Kubernetes specifications to transition application from running on data centers to store edge </li>
-            <li> integrated Mosquitto message broker to create a pub/sub messaging system between microservices </li>
-          </ul>
-         </div>
-
-         <div class = "flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-3">
-          <div class = "text-white text-center text-lg"> University of Texas at Austin Computer Science Department </div>
-          <div class = "text-white text-center text-base"> - Data Structures Teaching Assistant - </div>
-          <ul class = "list-disc pl-5">
-            <li> lead weekly discussion sections of 26 students to clarify concepts and assist with the completion of
-              LeetCode style practice problems in Java to assist in exam preparation </li>
-            <li> assist with debugging and reasoning through the algorithmic logic of various programming assignments </li>
-            <li> clarify notable gaps in knowledge regarding the lecture content </li>
-
-          </ul>
-         </div>
-
-         <div class = "flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-3">
-          <div class = "text-white text-center text-lg"> University of Texas at Austin Computer Science Department </div>
-          <div class = "text-white text-center text-base"> - Computer Science Pod Mentor - </div>
-          <ul class = "list-disc pl-5">
-            <li> coordinate and lead weekly events for 25 freshmen majoring in computer science </li>
-            <li> assist with exam preparation for introductory computer science concepts class </li>
-            <li> organize networking events with professors in the computer science department </li>
-            <li> provide guidance on corporate recruiting process including resume reviews and coding assessment practice </li>
-          </ul>
-         </div>
-
-         <div class = "flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-3">
-          <div class = "text-white text-center text-lg"> StemKidz LLC. </div>
-          <div class = "text-white text-center text-base"> - Python Instructor - </div>
-          <ul class = "list-disc pl-5">
-            <li> instructed 10-15 children (ages 11-13) on python programming and mathematical base conversions </li>
-            <li> guided students through the creation of a rock-paper-scissors final project </li>
-          </ul>
-         </div>
-
-         
-
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+      <div class="text-white text-center text-lg"> Nectar </div>
+      <div class="text-white text-center text-sm mt-3"> A Google Chrome Extension that integrates with amazon.com
+        that provides information about the sustainability of a product's ingredients/components. </div>
+      <div class="flex flex-row justify-center space-x-4 mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+        </svg>
       </div>
+      <ul class="list-disc pl-5 mt-4">
+        <li> designed and implemented the entirety of the frontend with HTML, CSS and JavaScript </li>
+        <li> wrote function to interface wtih backend in order to calculate sustainability score with
+          Levenshtein's distance algorithm and display for each product </li>
+      </ul>
+      <div class="text-white mt-5 font-bold text-sm text-center"> built with: MERN tech stack, HTML/CSS/JS </div>
+      <div class="flex flex-row mt-5 justify-center space-x-4">
+        <a href="https://github.com/KshitijKapoor8/Nectar"> <button
+            class="text-white bg-light-blue p-3 hover:bg-dark-blue"> github code repo </button> </a>
+        <a href="https://devpost.com/software/nectar-zmuwce"> <button
+            class="text-white bg-light-blue p-3 hover:bg-dark-blue"> demo video </button> </a>
+      </div>
+    </div>
 
-  </body>
-  
-</html> 
+
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+      <div class="text-white text-center text-lg"> Mag-Net </div>
+      <div class="text-white text-center text-sm mt-3"> An iOS mobile application designed to enable networking between
+        women
+        in the STEM community. </div>
+      <div class="flex flex-row justify-center space-x-4 mt-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+        </svg>
+      </div>
+      <ul class="list-disc pl-5 mt-4">
+        <li> assisted in the design and implementation of the landing page in Swift </li>
+        <li> designed and implemented the registration and login pages in Swift </li>
+        <li> setup models in Firebase backend and created register and login API to interface with backend </li>
+
+      </ul>
+      <div class="text-white mt-5 font-bold text-sm text-center"> built with: Swift, Firebase, XCode </div>
+      <div class="flex flex-row mt-5 justify-center space-x-4">
+        <a href="https://devpost.com/software/mag-net"> <button class="text-white bg-light-blue p-3 hover:bg-dark-blue">
+            demo video </button> </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+      <div class="text-white text-center text-lg"> Predictive Modeling of Ambient Air Pollution Concentrations </div>
+      <div class="text-white text-center text-sm mt-3"> A data analysis project that utilizes machine learning
+        predictive modeling in order
+        to determine the urban factors that best correlate with high air pollution levels (measured by PM 2.5). </div>
+      <div class="flex flex-row justify-center space-x-4 mt-4">
+      </div>
+      <ul class="list-disc pl-5 mt-4">
+        <li> tested linear regression, decision tree, and K-nearest neighbors models to determine best algorithm and
+          predictors to predict PM2.5 concentration levels </li>
+        <li> use of R to tidy data with dpylr package and rsample/parsnip packages to create workflow, recipe and folds
+          for tuning models, cross validation and evaluation of model performance </li>
+
+      </ul>
+      <div class="text-white mt-5 font-bold text-sm text-center"> built with: R studio, tidyverse, rsample, parsnip
+      </div>
+      <div class="flex flex-row mt-5 justify-center space-x-4">
+        <a href="https://github.com/karnikachoudhury/Predictive-Modeling-with-Ambient-Air-Pollution-Concentrations">
+          <button class="text-white bg-light-blue p-3 hover:bg-dark-blue"> github code repo </button> </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="extracurr" class="flex flex-col justify-items-center bg-dark-navy/50 text-white w-3/5 mt-8 p-6 mx-auto">
+    <div class="text-white text-xl mx-auto font-bold"> Extracurriculars </div>
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-3">
+      <div class="text-white text-center text-lg"> University of Texas at Austin Quantum Collective </div>
+      <div class="text-white text-center text-sm"> - Director of Research - </div>
+      <ul class="list-disc pl-5 mt-2">
+        <li> organize events where quantum professionals present to members </li>
+        <li> manage and guide 20+ members through their individual quantum research projects </li>
+        <li> plan and organize local research conference for members and other quantum-affliated students to present
+          their research </li>
+      </ul>
+      <div class="text-white text-center text-sm mt-3"> - Member - </div>
+      <ul class="list-disc pl-5 mt-2">
+        <li> placed 2/8 teams in local quantum research conference for research on quantum error correction literature
+          review</li>
+        <li> chosen to present at an international S.Q.U.I.D quantum research conference hosted by the Quantum Coalition
+        </li>
+      </ul>
+      <div class="flex flex-row mt-5 justify-center space-x-4">
+        <a href="https://www.quantumcoalition.io/squid2023"> <button
+            class="text-white bg-light-blue p-3 hover:bg-dark-blue"> S.Q.U.I.D conference website </button> </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-6">
+      <div class="text-white text-center text-lg"> Unite and Inspire </div>
+      <div class="text-white text-center text-sm"> - Coding Team Youth Mentor - </div>
+      <ul class="list-disc pl-5 mt-2">
+        <li> guide a team of 30+ volunteers in instructional sessions educating the community (children, adults,
+          neurodivergent individuals) in programming (Java, HTML/CSS, Python) </li>
+        <li> responsible for designing the workshop curriculums and organizing sessions at local libraries and on Zoom
+        </li>
+        <li> recipient of the National Daily Bright Point Award for Volunteering Excellence for volunteering work with
+          this organization </li>
+      </ul>
+      <div class="flex flex-row mt-5 justify-center space-x-4">
+        <a href="https://uniteandinspire.org/"> <button class="text-white bg-light-blue p-3 hover:bg-dark-blue">
+            organization official website </button> </a>
+        <a
+          href="https://www.pointsoflight.org/awards/computer-science-student-passes-on-coding-skills-to-youth-and-students-with-learning-disabilities/">
+          <button class="text-white bg-light-blue p-3 hover:bg-dark-blue"> national award recipient article </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="flex flex-col justify-start bg-black w-full mt-6 text-xs text-white mx-auto space-y-2 p-4">
+    <div> thanks for visiting! </div>
+    <div> created with html, tailwind css and javascript </div>
+    <div> powered by coca cola (best drink ever) </div>
+  </div>
+
+
+
+</body>
+
+<script>
+  function scrollintro() {
+    var elem = document
+      .getElementById("intro");
+    elem.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollexperience() {
+    var elem = document
+      .getElementById("experience");
+    elem.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollprojects() {
+    var elem = document
+      .getElementById("projects");
+    elem.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  function scrollextracurr() {
+    var elem = document
+      .getElementById("extracurr");
+    elem.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  const twinkleText = document.getElementById('.twinkle-text');
+
+  setInterval(() => {
+    twinkleText.style.opacity = Math.random();
+  }, 500);
+</script>
+
+</html>
