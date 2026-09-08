@@ -3,6 +3,11 @@
 
 <head>
   <link rel="stylesheet" href="./src/output.css">
+  <style>
+    /* Scale root font-size down on small screens so Tailwind rem-based text sizes feel balanced */
+    html { font-size: 14px; }
+    @media (min-width: 768px) { html { font-size: 16px; } }
+  </style>
 </head>
 
 <body class="flex flex-col justify-items-center bg-dark-purple font-rubik">
