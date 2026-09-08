@@ -6,14 +6,14 @@
 </head>
 
 <body class="flex flex-col justify-items-center bg-dark-purple font-rubik">
-  <div class="flex flex-row justify-end bg-black w-full text-white mx-auto">
+  <div class="flex flex-row md:justify-end justify-between bg-black w-full text-white mx-auto px-4 flex-wrap">
     <button onclick="scrollintro()" class="hover:bg-light-blue p-3"> about me </button>
     <button onclick="scrollexperience()" class="hover:bg-light-blue p-3"> experience </button>
     <button onclick="scrollprojects()" class="hover:bg-light-blue p-3"> projects </button>
     <button onclick="scrollextracurr()" class="hover:bg-light-blue p-3"> extracurriculars </button>
   </div>
 
-  <div id="intro" class="flex flex-col justify-items-center bg-black/50 text-white w-3/5 mt-8 p-3 mx-auto">
+  <div id="intro" class="flex flex-col justify-items-center bg-black/50 text-white w-11/12 md:w-3/5 mt-8 p-3 mx-auto">
     <div class="text-white text-xl mx-auto animate-wiggle"> hello ! </div>
     <div class="text-white text-lg mx-auto"> I am Karnika Choudhury, </div>
     <div class="text-white text-lg mx-auto"> an aspiring software engineer and computer scientist. </div>
@@ -34,10 +34,10 @@
     </div>
   </div>
 
-  <div id="experience" class="flex flex-col justify-items-center bg-dark-navy/50 text-white w-3/5 mt-8 p-3 mx-auto">
+  <div id="experience" class="flex flex-col justify-items-center bg-dark-navy/50 text-white w-11/12 md:w-3/5 mt-8 p-3 mx-auto">
     <div class="text-white text-xl mx-auto font-bold"> Work Experience </div>
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-5 p-4 md:p-6">
       <div class="text-white text-center text-lg"> Atlassian </div>
 
       <div class="text-white text-center text-sm"> - Software Engineering Intern - </div>
@@ -48,7 +48,7 @@
       </ul>
     </div>
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-5 p-4 md:p-6">
       <div class="text-white text-center text-lg"> Procter and Gamble </div>
 
       <div class="text-white text-center text-sm"> - Software Engineering Intern - </div>
@@ -59,7 +59,7 @@
       </ul>
     </div>
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-5 p-4 md:p-6">
       <div class="text-white text-center text-lg"> H-E-B </div>
 
       <div class="text-white text-center text-sm"> - Software Engineering Intern - </div>
@@ -73,7 +73,7 @@
       </ul>
     </div>
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-10 p-4 md:p-6">
       <div class="text-white text-center text-lg"> University of Texas at Austin Computer Science Department </div>
       <div class="text-white text-center text-sm"> - Databases Teaching Assistant - </div>
       <ul class="list-disc pl-5 mt-2">
@@ -102,10 +102,10 @@
   </div>
 
 
-  <div id="projects" class="flex flex-col justify-items-center bg-black/50 text-white w-3/5 mt-8 p-3 mx-auto">
+  <div id="projects" class="flex flex-col justify-items-center bg-black/50 text-white w-11/12 md:w-3/5 mt-8 p-3 mx-auto">
     <div class="text-white text-xl mx-auto font-bold"> Projects </div>
     
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-5 p-4 md:p-6">
       <div class="text-white text-center text-lg"> Curiosity and Reinforcement Learning in Robotics </div>
       <div class="text-white text-center text-sm mt-3"> Boosted simulated robotic arm performance over baseline PPO by 
         building a custom reinforcement learning pipeline with an Intrinsic Curiosity module implementation in PyTorch. </div>
@@ -123,7 +123,7 @@ Module (ICM) for sparse-reward robotic manipulation </li>
       </div>
     </div>
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-5 p-4 md:p-6">
       <div class="text-white text-center text-lg"> Value Aware Multi-Core Scheduling Simulator </div>
       <div class="text-white text-center text-sm mt-3"> Developed a Python-based multi-core scheduling simulator to analyze the impact of migration costs and evaluate local CPU schedulers against global load-balancing strategies. </div>
       <ul class="list-disc text-white pl-5 mt-4">
@@ -137,7 +137,7 @@ Module (ICM) for sparse-reward robotic manipulation </li>
       </div>
     </div>
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-5 p-4 md:p-6">
       <div class="text-white text-center text-lg"> Nectar </div>
       <div class="text-white text-center text-sm mt-3"> A Google Chrome Extension that integrates with amazon.com
         that provides information about the sustainability of a product's ingredients/components. </div>
@@ -163,7 +163,7 @@ Module (ICM) for sparse-reward robotic manipulation </li>
     </div>
 
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-5 p-4 md:p-6">
       <div class="text-white text-center text-lg"> Mag-Net </div>
       <div class="text-white text-center text-sm mt-3"> An iOS mobile application designed to enable networking between
         women
@@ -188,7 +188,7 @@ Module (ICM) for sparse-reward robotic manipulation </li>
       </div>
     </div>
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-5 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-5 p-4 md:p-6">
       <div class="text-white text-center text-lg"> Predictive Modeling of Ambient Air Pollution Concentrations </div>
       <div class="text-white text-center text-sm mt-3"> A data analysis project that utilizes machine learning
         predictive modeling in order
@@ -211,9 +211,9 @@ Module (ICM) for sparse-reward robotic manipulation </li>
     </div>
   </div>
 
-  <div id="extracurr" class="flex flex-col justify-items-center bg-dark-navy/50 text-white w-3/5 mt-8 p-6 mx-auto">
+  <div id="extracurr" class="flex flex-col justify-items-center bg-dark-navy/50 text-white w-11/12 md:w-3/5 mt-8 p-6 mx-auto">
     <div class="text-white text-xl mx-auto font-bold"> Extracurriculars </div>
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-3">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-10 p-3">
       <div class="text-white text-center text-lg"> University of Texas at Austin Quantum Collective </div>
       <div class="text-white text-center text-sm"> - Director of Research - </div>
       <ul class="list-disc pl-5 mt-2">
@@ -235,7 +235,7 @@ Module (ICM) for sparse-reward robotic manipulation </li>
       </div>
     </div>
 
-    <div class="flex flex-col bg-light-blue/20 w-3/5 mx-auto mt-10 p-6">
+    <div class="flex flex-col bg-light-blue/20 w-11/12 md:w-3/5 mx-auto mt-10 p-4 md:p-6">
       <div class="text-white text-center text-lg"> Unite and Inspire </div>
       <div class="text-white text-center text-sm"> - Coding Team Youth Mentor - </div>
       <ul class="list-disc pl-5 mt-2">
